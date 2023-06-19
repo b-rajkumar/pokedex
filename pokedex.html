@@ -5,65 +5,15 @@
   <style>
     #page {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      width: 900px;
-      margin: 0 auto;
-      font-size: 18;
-      background-color: antiquewhite;
-      border: 2px black solid;
-    }
-
-    .pokemon-card {
-      width: 150px;
-      background-color: aquamarine;
-      padding: 20px;
-      margin: 15px;
-      border: 1px black solid;
-    }
-
-    .pokemon-card>* {
-      margin-top: 10px;
-    }
-
-    .pokemon-name {
       text-align: center;
-      font-size: 0.8em;
-      font-weight: 500;
-    }
-
-    .pokemon-image {
-      background-color: aqua;
-      width: inherit;
-      height: 150px;
-      margin: 0 auto;
-      border: 1px black dashed;
-    }
-
-    .pokemon-info {
-      border: 1px black dotted;
-      display: table;
-      width: inherit;
-    }
-
-    .pokemon-info>div {
-      display: table-row;
-    }
-
-    .pokemon-info>div>div {
-      font-size: 0.6em;
-      display: table-cell;
-    }
-
-    .pokemon-info>div>div:nth-child(2) {
-      text-align: right;
-      font-weight: 300;
-    }
-
-    .pokemon-info>div>div:first-child {
-      font-weight: 500;
+      font-size: 18;
     }
 
     .poke-table {
       display: table;
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 20px;
     }
 
     .poke-table>div {
@@ -73,805 +23,827 @@
     .poke-table>div>div {
       display: table-cell;
     }
+
+    .pokemon-card {
+      width: 175px;
+      background-color: rgb(162, 209, 224);
+      padding: 15px;
+      margin: 10px;
+      border: 1px black solid;
+      border-radius: 10px;
+    }
+
+    .pokemon-card>* {
+      margin-top: 10px;
+    }
+
+    .pokemon-name {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .pokemon-image {
+      background-color: rgb(210, 233, 240);
+      width: inherit;
+      height: 175px;
+      margin: 0 auto;
+    }
+
+    .pokemon-info {
+      width: inherit;
+      font-size: 0.7em;
+    }
+
+    .pokemon-info th {
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .pokemon-info td {
+      text-align: right;
+      font-weight: 300;
+    }
   </style>
 </head>
 
 <body>
 
   <main id="page">
+    <div>
+      <h1>POKEDEX</h1>
+    </div>
 
     <div class="poke-table">
       <div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+        <div class="pokemon-card">
+          <div class="pokemon-image">
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
+          <div class="pokemon-name">
+            Bulbasaur
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
         </div>
 
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+        <div class="pokemon-card">
+          <div class="pokemon-image">
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
+          <div class="pokemon-name">
+            Bulbasaur
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
         </div>
 
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
+
       <div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+        <div class="pokemon-card">
+          <div class="pokemon-image">
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
+          <div class="pokemon-name">
+            Bulbasaur
           </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
 
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
 
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="pokemon-card">
-            <div class="pokemon-image">
-
-            </div>
-            <div class="pokemon-name">
-              Bulbasaur
-            </div>
-            <div class="pokemon-info">
-              <div>
-                <div>
-                  Types
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Weight
-                </div>
-                <div>
-                  Grass Poison
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  HP
-                </div>
-                <div>
-                  45
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  XP
-                </div>
-                <div>
-                  32
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Attack
-                </div>
-                <div>
-                  64
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  Defence
-                </div>
-                <div>
-                  43
-                </div>
-              </div>
-            </div>
-          </div>
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
         </div>
 
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="pokemon-card">
+          <div class="pokemon-image">
+
+          </div>
+          <div class="pokemon-name">
+            Bulbasaur
+          </div>
+          <table class="pokemon-info">
+            <tr>
+              <th>
+                Types
+              </th>
+              <td>
+                Grass Poison
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Weight
+              </th>
+              <td>
+                50
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                HP
+              </th>
+              <td>
+                42
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                XP
+              </th>
+              <td>
+                64
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Attack
+              </th>
+              <td>
+                62
+              </td>
+            </tr>
+
+            <tr>
+              <th>
+                Defence
+              </th>
+              <td>
+                87
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
-
     </div>
 
 
