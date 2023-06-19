@@ -82,8 +82,8 @@ const pokemonTableGenerator = (pokemon) => {
   const pokemonData = pokemon.split('\n');
   let pokemonTable = `<div class="poke-table" > `;
 
-  for(let i = 0; i < pokemonData.length; i += 4) {
-    pokemonTable += pokemonRowGenerator(pokemonData.slice(i, i + 4));
+  for(let i = 0; i < pokemonData.length; i += 5) {
+    pokemonTable += pokemonRowGenerator(pokemonData.slice(i, i + 5));
   }
 
   pokemonTable += '</div>'
