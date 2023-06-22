@@ -3,67 +3,65 @@ const fs = require("fs");
 const pokeCardGenerator = (pokemonData, number) => {
   const [pokemonName, types, weight, hp, xp, attack, defence] = pokemonData.split('|');
   const pokeCardTemplate = `<div class="pokemon-card">
-            <div class="pokemon-image">
-          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${number}.png" height="175px width=" 175px" />
+            <div class="pokemon-image-bg">
+          <img class="pokemon-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${number}.png"/>
             </div>
             <div class="pokemon-name">
               ${pokemonName}
             </div>
-            <table class="pokemon-info">
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   Types
-                </th>
-                <td>
+                </div>
+                <div>
                    ${types}
-                </td>
-              </tr>
+                </div>
+              </div>
   
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   Weight
-                </th>
-                <td>
+                </div>
+                <div>
                   ${weight}
-                </td>
-              </tr>
+                </div>
+              </div>
   
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   HP
-                </th>
-                <td>
+                </div>
+                <div>
                   ${hp}
-                </td>
-              </tr>
+                </div>
+              </div>
   
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   XP
-                </th>
-                <td>
+                </div>
+                <div>
                   ${xp}
-                </td>
-              </tr>
+                </div>
+              </div>
   
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   Attack
-                </th>
-                <td>
+                </div>
+                <div>
                   ${attack}
-                </td>
-              </tr>
+                </div>
+              </div>
   
-              <tr>
-                <th>
+              <div class="element">
+                <div>
                   Defence
-                </th>
-                <td>
+                </div>
+                <div>
                   ${defence}
-                </td>
-              </tr>
-            </table>
+                </div>
+              </div>
           </div>`;
 
   return pokeCardTemplate;
@@ -74,10 +72,7 @@ const pokemonGenerator = (pokemons) => {
   let pokemon = `<div class="pokemon-flex-box" > `;
 
   pokemonData.forEach((pokemonInfo, index) => {
-    let number = index + 1;
-    number = '0'.repeat(Math.max(0, (3 - number.toString().length))) + number;
-
-    pokemon += pokeCardGenerator(pokemonInfo, number);
+    pokemon += pokeCardGenerator(pokemonInfo, index + 1);
   });
 
   pokemon += '</div>'
