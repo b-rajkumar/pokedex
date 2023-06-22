@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-const pokeCardGenerator = (pokemonData) => {
+const pokeCardGenerator = (pokemonData, number) => {
   const [pokemonName, types, weight, hp, xp, attack, defence] = pokemonData.split('|');
   const pokeCardTemplate = `<div class="pokemon-card">
             <div class="pokemon-image">
-  
+          <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${number}.png" height="175px width=" 175px" />
             </div>
             <div class="pokemon-name">
               ${pokemonName}
@@ -69,29 +69,23 @@ const pokeCardGenerator = (pokemonData) => {
   return pokeCardTemplate;
 };
 
-const pokemonRowGenerator = (pokemonData) => {
-  const cells = pokemonData.map((pokemon) => pokeCardGenerator(pokemon));
-  let rowTemplate = '<div>';
-  cells.forEach((cell) => rowTemplate += cell);
-  rowTemplate += '</div>';
+const pokemonGenerator = (pokemons) => {
+  const pokemonData = pokemons.split('\n');
+  let pokemon = `<div class="pokemon-flex-box" > `;
 
-  return rowTemplate;
-};
+  pokemonData.forEach((pokemonInfo, index) => {
+    let number = index + 1;
+    number = '0'.repeat(Math.max(0, (3 - number.toString().length))) + number;
 
-const pokemonTableGenerator = (pokemon) => {
-  const pokemonData = pokemon.split('\n');
-  let pokemonTable = `<div class="poke-table" > `;
+    pokemon += pokeCardGenerator(pokemonInfo, number);
+  });
 
-  for(let i = 0; i < pokemonData.length; i += 5) {
-    pokemonTable += pokemonRowGenerator(pokemonData.slice(i, i + 5));
-  }
+  pokemon += '</div>'
 
-  pokemonTable += '</div>'
-
-  return pokemonTable;
+  return pokemon;
 };
 
 const pokemonData = fs.readFileSync('./poke-stats', 'utf-8');
-const pokemonTable = pokemonTableGenerator(pokemonData);
+const pokemon = pokemonGenerator(pokemonData);
 
-fs.writeFileSync('./pokemon-data', pokemonTable);
+fs.writeFileSync('./pokemon-data', pokemon);
