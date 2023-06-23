@@ -48,7 +48,7 @@ body {
    height: 410px;
    padding: 10px;
    border: var(--pokecard-border) 1px solid;
-   box-shadow: 2px 3px 0px var(--pokecard-border);
+   box-shadow: 4px 3px 0px var(--pokecard-border);
    border-radius: 10px;
    background-color: var(--pokecard-color);
    display: flex;
