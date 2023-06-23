@@ -135,4 +135,5 @@ body {
 .pokemon-card:hover {
   border: none;
   box-shadow: none;
+  background-color: var(--page-bg-color);
 }
